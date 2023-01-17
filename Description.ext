@@ -1,0 +1,32 @@
+//This is where you create the custom Fortify item listing. I decided to create different sets of objects based on their type, to not overwhelm the self interact wheel.
+
+class ACEX_Fortify_Presets {
+	class FON_CustomBarriers {
+  //this class name is the reference made when changing the Fortify object set
+		displayName = "Foundation Barriers";
+    //the display name will show up as a listing in the Fortify module, when selecting a starting objects preset
+			objects[] = {
+				{"Land_HBarrier_3_F", 10},
+        //formatting is object class string, fortify cost. Fortify cost also is associated with build time
+				{"Land_HBarrierWall6_F", 15},
+				{"Land_BagFence_Long_F", 5},
+				{"Land_BagFence_Round_F", 5}
+			};
+	};
+	class FON_Turrets {
+		displayName = "Foundation Turrets";
+			objects[] = {
+				{"rhs_KORD_MSV", 15},
+				{"rhs_KORD_high_MSV", 15}
+		};
+	};
+	class FON_CustomBuildings {
+		displayName = "Foundation Buildings";
+			objects[] = {
+				{"Land_BagBunker_Small_F", 110},
+				{"Land_BagBunker_Large_F", 135},
+				{"Land_HBarrierTower_F", 85},
+				{"Land_Cargo_Patrol_V2_F", 90}
+			};
+	};
+};
