@@ -1,0 +1,7 @@
+//the script below also needs to start on the object. Change the _object to "this" without the quotations. The script section of the addAction is where we call this very function we created. The parameters before "spawn" are identities that will be carried into the spawned script. The "condition" section of the addAction we set in this way, so only someone with the role "Engineer" can interact with this addAction. If you want to add multiple, you can put OR at the end of each statement or ||
+
+this addAction ["Fortify Barriers", {params ["_target", "_caller", "_actionId", "_arguments"]; [_target, _caller, _actionId] spawn FON_fnc_CustomBarriers;}, nil, 3, false, true, "", "(roleDescription _this) isEqualTo 'Platoon Leader@Dacha'", 5, false, "", ""];
+
+this addAction ["Fortify Turrets", {params ["_target", "_caller", "_actionId", "_arguments"]; [_target, _caller, _actionId] spawn FON_fnc_CustomTurrets;}, nil, 3, false, true, "", "(roleDescription _this) isEqualTo 'Platoon Leader@Dacha'", 5, false, "", ""];
+
+this addAction ["Fortify Structures", {params ["_target", "_caller", "_actionId", "_arguments"]; [_target, _caller, _actionId] spawn FON_fnc_CustomStructures;}, nil, 3, false, true, "", "(roleDescription _this) isEqualTo 'Platoon Leader@Dacha'", 5, false, "", ""];
