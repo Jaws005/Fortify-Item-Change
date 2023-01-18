@@ -1,0 +1,18 @@
+//The FON_fnc's below will refer to the similarly named functions you put in the init (in the "init.sqf" file in this folder)
+//Creating a self ACE interaction doesn't allow for a "cooldown", as I haven't found an ability to delete ace interactions. If you know how to delete ace interactions, then you can do that on this unit, and recall the same lines to re-add the ace interaction
+
+_newcommand = ["Fortify", "Fortify Select", "", {}, {true}] call ace_interact_menu_fnc_createAction; 
+ 
+[this, 1, ["ACE_SelfActions"], _newcommand] call ace_interact_menu_fnc_addActionToObject; 
+ 
+_newsubcommand = ["Turrets", "Turrets", "", {hint "turrets available"; this spawn FON_fnc_CustomTurretsSelf}, {true}] call ace_interact_menu_fnc_createAction; 
+ 
+[this, 1, ["ACE_SelfActions", "Fortify"], _newsubcommand] call ace_interact_menu_fnc_addActionToObject; 
+ 
+_newsubcommand2 = ["Barriers", "Barriers", "", {hint "barriers available"; this spawn FON_fnc_CustomBarriersSelf}, {true}] call ace_interact_menu_fnc_createAction; 
+ 
+[this, 1, ["ACE_SelfActions", "Fortify"], _newsubcommand2] call ace_interact_menu_fnc_addActionToObject;
+
+_newsubcommand3 = ["Structures", "Structures", "", {hint "structures available"; this spawn FON_fnc_CustomStructuresSelf}, {true}] call ace_interact_menu_fnc_createAction; 
+ 
+[this, 1, ["ACE_SelfActions", "Fortify"], _newsubcommand3] call ace_interact_menu_fnc_addActionToObject;
